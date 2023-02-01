@@ -1,0 +1,227 @@
+/* ========== GOOGLE FONTS ========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ========== CSS VARIABLES ========== */
+
+:root {
+    --primary-bg-color: #0f0f10;
+    --secondary-bg-color: #181a1b;
+    --accent-color: #ff1134;
+    --text-color: #f2f2f3;
+    --btn-color: #1e1e21;
+}
+
+/* ========== BASE ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2rem;
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+li {
+    font-weight: 500;
+    list-style: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========== REUSABLE CLASSES ========== */
+
+.container {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-inline: 2rem;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.btn {
+    background-color: var(--btn-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #000000;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+/* ========== HEADER SECTION ========== */
+
+header {
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+nav {
+    gap: 5rem;
+}
+
+nav > .nav-list {
+    gap: 4rem;
+}
+
+nav > .nav-btn {
+    padding: 0.7rem 3rem;
+}
+
+nav > .bar {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    nav > .nav-list {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    nav > .bar {
+        display: block;
+    }
+
+    nav > .nav-btn {
+        display: none;
+    }
+}
+
+/* ========== HERO SECTION ========== */
+
+.main-left {
+    flex-basis: 50%;
+}
+
+.main-left img {
+    transform: translateY(-40%);
+    position: relative;
+    z-index: -1;
+}
+
+.main-right {
+    flex-basis: 50%;
+}
+
+.main-right > img {
+    align-self: center;
+}
+
+.main-right > h2 {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.main-right > h4 {
+    margin-bottom: 1.5rem;
+}
+
+.main-right > p {
+    width: 80%;
+}
+
+.main-right > .hero-btn {
+    gap: 1rem;
+    align-self: flex-start;
+    margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 1030px) {
+    .main-right > p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        justify-content: center;
+    }
+    .main-left {
+        position: absolute;
+    }
+
+    .main-left img {
+        opacity: 0.3;
+    }
+
+    .main-right {
+        flex-basis: 100%;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .main-right .hero-btn {
+        align-self: center;
+    }
+}
