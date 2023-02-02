@@ -24,6 +24,7 @@
 body {
     background-color: var(--primary-bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 h2 {
@@ -117,6 +118,13 @@ a {
     opacity: 1;
 }
 
+.small {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
 /* ========== HEADER SECTION ========== */
 
 header {
@@ -158,62 +166,67 @@ nav > .bar {
 
 /* ========== HERO SECTION ========== */
 
-.main-left {
+.hero-left {
     flex-basis: 50%;
 }
 
-.main-left img {
+.hero-left img {
     transform: translateY(-40%);
     position: relative;
     z-index: -1;
 }
 
-.main-right {
+.hero-right {
     flex-basis: 50%;
 }
 
-.main-right > img {
+.hero-right > img {
     align-self: center;
 }
 
-.main-right > h2 {
+.hero-right > h2 {
     margin-top: 1rem;
     margin-bottom: 2.5rem;
 }
 
-.main-right > h4 {
+.hero-right > h4 {
     margin-bottom: 1.5rem;
 }
 
-.main-right > p {
+.hero-right > p {
     width: 80%;
 }
 
-.main-right > .hero-btn {
+.hero-right > .hero-btn {
     gap: 1rem;
     align-self: flex-start;
     margin-top: 2.5rem;
 }
 
+.logo {
+    justify-content: space-around;
+    gap: 2rem;
+}
+
 @media screen and (max-width: 1030px) {
-    .main-right > p {
+    .hero-right > p {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 767px) {
-    main {
+    .hero {
         justify-content: center;
     }
-    .main-left {
+    .hero-left {
         position: absolute;
     }
 
-    .main-left img {
+    .hero-left img {
         opacity: 0.3;
     }
 
-    .main-right {
+    .hero-right {
         flex-basis: 100%;
         align-items: center;
         text-align: center;
@@ -221,7 +234,106 @@ nav > .bar {
         z-index: 1;
     }
 
-    .main-right .hero-btn {
+    .hero-right .hero-btn {
         align-self: center;
+    }
+
+    .logo {
+        margin-top: 8rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* ========== SPECS SECTION ========== */
+
+.specs {
+    margin: 10rem 0;
+}
+
+.specs-header {
+    margin-bottom: 3rem;
+}
+
+.specs-body {
+    gap: 5rem;
+}
+
+.specs-left {
+    gap: 1.5rem;
+}
+
+.specs-left .bluetooth,
+.specs-left .microphone {
+    padding-left: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+    .specs-body {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .specs-right {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .specs-right img {
+        opacity: 0.3;
+    }
+}
+
+/* ========== CASE SECTION ========== */
+
+.case {
+    margin-bottom: 10rem;
+}
+
+.case-header {
+    margin-bottom: 5rem;
+}
+
+.case-body {
+    gap: 4rem;
+}
+
+.case-body .case-text {
+    width: 20%;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.case-body .case-btn {
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1070px) {
+    .case-body .case-text {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .case-body {
+        gap: 2rem;
+    }
+
+    .case-body .case-text {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .case-body {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .case-body .case-text {
+        width: 80%;
+        text-align: center;
+        align-items: center;
     }
 }
