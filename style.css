@@ -63,6 +63,8 @@ li {
 
 li:hover {
     color: var(--accent-color);
+    scale: 1.03;
+    transition: all 0.3s ease;
 }
 
 a {
@@ -110,7 +112,8 @@ a {
 
 .btn:hover {
     background-color: var(--accent-color);
-    transition: all 0.3s ease;
+    scale: 1.03;
+    transition: all 0.5s ease;
     cursor: pointer;
 }
 
@@ -416,9 +419,13 @@ nav > .bar {
 .headphone {
     background-color: var(--secondary-bg-color);
     width: 180px;
-    /* height: 200px; */
     border-radius: 0.5rem;
     padding: 1rem;
+}
+
+.headphone:hover {
+    scale: 1.05;
+    transition: all 0.5s ease;
 }
 
 .headphone-img {
