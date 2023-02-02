@@ -33,8 +33,8 @@ h2 {
 }
 
 h3 {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 1.7rem;
+    font-weight: 500;
 }
 
 h4 {
@@ -59,6 +59,10 @@ li {
     font-weight: 500;
     list-style: none;
     cursor: pointer;
+}
+
+li:hover {
+    color: var(--accent-color);
 }
 
 a {
@@ -116,6 +120,10 @@ a {
 
 .opacity {
     opacity: 1;
+}
+
+.bold {
+    font-weight: 500;
 }
 
 .small {
@@ -325,6 +333,10 @@ nav > .bar {
 }
 
 @media screen and (max-width: 600px) {
+    .case {
+        margin-bottom: 7rem;
+    }
+
     .case-body {
         flex-direction: column;
         align-items: center;
@@ -336,4 +348,208 @@ nav > .bar {
         text-align: center;
         align-items: center;
     }
+}
+
+/* ========== CTA SECTION ========== */
+
+.cta {
+    background-color: var(--secondary-bg-color);
+    border-radius: 1rem;
+    margin-bottom: 8rem;
+    padding: 3rem 2rem;
+    gap: 2rem;
+}
+
+.cta-left {
+    flex-basis: 25%;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.cta-left .cta-btn {
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1180px) {
+    .cta-left {
+        flex-basis: 30%;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .cta {
+        gap: 0;
+    }
+
+    .cta-left {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cta {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .cta-left {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* ========== SHOPPING SECTION ========== */
+
+.shopping {
+    margin-bottom: 10rem;
+}
+
+.shopping-header {
+    margin-bottom: 8rem;
+}
+
+.shopping-body {
+    gap: 6rem 3rem;
+    flex-wrap: wrap;
+}
+
+.headphone {
+    background-color: var(--secondary-bg-color);
+    width: 180px;
+    /* height: 200px; */
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.headphone-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    top: -4rem;
+}
+
+.headphone-text {
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.headphone-text > div > p {
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+}
+
+.headphone-text > div:last-child {
+    background-color: #000000;
+    padding: 0.7rem 0.7rem 0.25rem;
+    border-radius: 0.5rem;
+}
+
+.headphone-text > div:last-child:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 475px) {
+    .shopping-body {
+        gap: 6rem 2rem;
+    }
+}
+
+/* ========== FOOTER SECTION ========== */
+
+footer {
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 8rem;
+}
+
+.footer-list h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-list p:hover {
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+.subscribe {
+    position: relative;
+}
+
+.subscribe > input {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 1.5rem 0.8rem;
+    width: 23rem;
+}
+
+.subscribe > input::placeholder {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.subscribe > button {
+    position: absolute;
+    right: 0.8rem;
+    gap: 1rem;
+}
+
+.footer-social .social-logo {
+    margin-top: 2rem;
+}
+
+.footer-social .social-logo img {
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    footer {
+        column-gap: 2rem;
+    }
+
+    .subscribe > input {
+        width: 19rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .subscribe > input {
+        width: 16rem;
+    }
+}
+
+/* ========== FOOTER COPYRIGHT ========== */
+
+.footer-copyright {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.footer-copyright p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.footer-copyright .github-link {
+    text-decoration: none;
+    padding-left: 5px;
+    color: #ffffff;
+}
+
+.footer-copyright .github-link:hover {
+    color: var(--accent-color);
 }
