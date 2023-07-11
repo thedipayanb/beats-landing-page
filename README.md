@@ -1,7 +1,5 @@
 # beats-landing-page
 
-This is one of the HTML and CSS assignments, was given in **Full Stack JavaScript Bootcamp 2.0** mentored by [Hitesh Choudhary](https://github.com/hiteshchoudhary).
-
 I have used CSS properties like **Flexbox**, **Grid**, **Position** to build the website and used **Media Queries** to make the website responsive. Also used `transition` property to create some animations.
 
 ### Tech Stack:
